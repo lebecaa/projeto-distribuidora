@@ -221,6 +221,10 @@ button:hover {
     color: #47150C;
 }
 
+.cart-link i.fas.fa-shopping-cart {
+    font-size: 30px; 
+}
+
 .added-icon {
     margin-left: 10px;
     color: green;
@@ -365,7 +369,7 @@ form button:hover {
         gap: 20px;
 
 
-        .product img {
+        .product img{
             height: 100px;
         }
 
@@ -401,6 +405,7 @@ form button:hover {
 
         .cart-button {
             color: #47150C;
+            size: 50px;
         }
 
         select,
@@ -409,17 +414,14 @@ form button:hover {
             width: 100%;
         }
 
-       .cart-item button {
+        .cart-item button {
             padding: 8px;
             font-size: 12px;
             border-radius: 10px;
             width: 80px;
         }
 
-        .fas.fa-shopping-cart {
-            color: #47150C;
-            width: 40px;
-            height: 40px;
-        }
-}
+
+
+    }
 }
