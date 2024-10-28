@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIPE BEBIDAS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Tela Inicial -->
+    <header>
+        <div class="logo">
+            <img src="./img/logo-lipe-bebidas.png" alt="Logo da Distribuidora">
+        </div>
+        <div class="header-actions">
+            <div class="social-buttons">
+                <a href="https://www.instagram.com/lipe_bebidas?igsh=NnJjdXBrd2d2cDQ3" target="_blank"
+                    class="social-icon">
+                    <img src="./img/instagram-logo.png" alt="Instagram">
+                </a>
+                <a href="https://wa.me/558699854956" target="_blank" class="social-icon">
+                    <img src="./img/whatsapp-logo.png" alt="WhatsApp">
+                </a>
+            </div>
+            <div class="cart-button">
+                <a href="carrinho.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-badge" class="cart-badge">0</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <section class="catalog">
+        <h1>NOSSOS PRODUTOS</h1>
+        <div class="products">
+
+            <div class="product">
+                <img src="./img/skolln.png" alt="Skol">
+                <h2>Skol</h2>
+                <p>R$ 3,50</p>
+
+                <div class="quantity-selector">
+                    <button class="decrease-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="increase-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('Skol', 3.50, this)">Adicionar ao carrinho</button>
+                <span class="added-icon" style="display:none;">
+                    <i class="fas fa-check"></i>
+                </span>
+            </div>
+
+
+            <div class="product">
+                <img src="./img/skol-latinha.png" alt="Skol Latinha">
+                <h2>Skol Latinha</h2>
+                <p>R$ 4,00</p>
+
+                <div class="quantity-selector">
+                    <button class="decrease-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="increase-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('Skol Latinha', 4.00, this)">Adicionar ao carrinho</button>
+            </div>
+
+
+            <div class="product">
+                <img src="./img/brahma-dp.png" alt="Brahma Duplo Malte">
+                <h2>Brahma Duplo Malte</h2>
+                <p>R$ 4,25</p>
+
+                <div class="quantity-selector">
+                    <button class="decrease-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="increase-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('Brahma Duplo Malte', 4.25, this)">Adicionar ao carrinho</button>
+            </div>
+
+
+            <div class="product">
+                <img src="./img/imperio.png" alt="Império">
+                <h2>Império</h2>
+                <p>R$ 5,50</p>
+
+                <div class="quantity-selector">
+                    <button class="decrease-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="increase-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('Império', 5.50, this)">Adicionar ao carrinho</button>
+            </div>
+
+
+            <div class="product">
+                <img src="./img/spaten.png" alt="Spaten">
+                <h2>Spaten</h2>
+                <p>R$ 6,00</p>
+
+                <div class="quantity-selector">
+                    <button class="decrease-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="increase-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('Spaten', 6.00, this)">Adicionar ao carrinho</button>
+            </div>
+
+
+            <div class="product">
+                <img src="./img/budweiser.png" alt="Budweiser">
+                <h2>Budweiser</h2>
+                <p>R$ 6,00</p>
+
+                <div class="quantity-selector">
+                    <button class="decrease-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="increase-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('Budweiser', 6.00, this)">Adicionar ao carrinho</button>
+            </div>
+
+
+            <div class="product">
+                <img src="./img/stellaartois.png" alt="Stella Artois">
+                <h2>Stella Artois</h2>
+                <p>R$ 7,00</p>
+
+                <div class="quantity-selector">
+                    <button class="decrease-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="increase-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('Stella Artois', 7.00, this)">Adicionar ao carrinho</button>
+            </div>
+
+
+            <div class="product">
+                <img src="./img/ice.png" alt="Ice">
+                <h2>Ice</h2>
+                <p>R$ 7,00</p>
+
+                <div class="quantity-selector">
+                    <button class="decrease-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="increase-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('Ice', 7.00, this)">Adicionar ao carrinho</button>
+            </div>
+
+            <div class="product">
+                <img src="./img/heineken.png" alt="Heineken">
+                <h2>Heineken</h2>
+                <p>R$ 7,50</p>
+
+                <div class="quantity-selector">
+                    <button class="decrease-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="increase-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button onclick="addToCart('Heineken', 7.50, this)">Adicionar ao carrinho</button>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
