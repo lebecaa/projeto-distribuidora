@@ -1,5 +1,3 @@
-
-
 const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 const cartContainer = document.getElementById('cart-items');
 const subtotalElement = document.getElementById('subtotal-price');
