@@ -7,6 +7,35 @@ function changeQuantity(button, change) {
     quantitySpan.textContent = currentQuantity;
 }
 
+const productsContainer = document.querySelector('.products');
+
+let isMouseDown = false;
+let startX;
+let scrollLeft;
+
+productsContainer.addEventListener('mousedown', (e) => {
+    isMouseDown = true;
+    startX = e.pageX - productsContainer.offsetLeft;
+    scrollLeft = productsContainer.scrollLeft;
+});
+
+productsContainer.addEventListener('mouseleave', () => {
+    isMouseDown = false;
+});
+
+productsContainer.addEventListener('mouseup', () => {
+    isMouseDown = false;
+});
+
+productsContainer.addEventListener('mousemove', (e) => {
+    if (!isMouseDown) return;
+    e.preventDefault();
+    const x = e.pageX - productsContainer.offsetLeft;
+    const walk = (x - startX) * 3; // Aumente o valor para uma rolagem mais rápida
+    productsContainer.scrollLeft = scrollLeft - walk;
+});
+
+
 function addToCart(productName, price, button) {
     const quantitySelector = button.parentNode.querySelector('.quantity');
     const quantity = parseInt(quantitySelector.textContent);
