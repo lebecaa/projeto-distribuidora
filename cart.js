@@ -13,8 +13,6 @@ function updatePrices() {
     totalElement.textContent = totalPrice.toFixed(2);
 }
 
-
-
 cartItems.forEach((item, index) => {
     const itemElement = document.createElement('div');
     itemElement.classList.add('cart-item');
@@ -29,8 +27,6 @@ cartItems.forEach((item, index) => {
 });
 
 updatePrices();
-
-
 deliveryLocation.addEventListener('change', updatePrices);
 
 function removeFromCart(index) {
@@ -38,7 +34,6 @@ function removeFromCart(index) {
     localStorage.setItem('cart', JSON.stringify(cartItems));
     window.location.reload();
 }
-
 
 document.getElementById('order-form').addEventListener('submit', function (e) {
     e.preventDefault();
@@ -57,6 +52,6 @@ document.getElementById('order-form').addEventListener('submit', function (e) {
     mensagem += `\nEntrega: R$ ${deliveryFee.toFixed(2)}`;
     mensagem += `\nTotal: R$ ${(subtotalPrice + deliveryFee).toFixed(2)}`;
 
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=558699854956&text=${encodeURIComponent(mensagem)}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=5599991330396&text=${encodeURIComponent(mensagem)}`;
     window.open(whatsappUrl, '_blank');
 });
