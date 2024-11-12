@@ -341,16 +341,18 @@ form button:hover {
 @media (max-width: 768px) {
     .products {
         display: flex;
-        flex-wrap: nowrap; /* Faz os cards ficarem em uma linha */
-        overflow-x: auto; /* Permite que role horizontalmente se necessário */
+        flex-wrap: nowrap; /* Cards em linha única */
+        overflow-x: auto; /* Permite rolar horizontalmente */
         gap: 20px;
-        scroll-snap-type: x mandatory
+        scroll-snap-type: x mandatory; /* Para garantir que os cards se alinhem ao rolar */
+        padding-left: 20px; /* Adiciona um espaçamento à esquerda para que o primeiro card seja visível */
+        scroll-padding-left: 20px; /* Garante que o primeiro item tenha espaço extra à esquerda */
     }
 
     .product {
-        flex: 0 0 auto; /* Não permite que o card encolha ou se expanda */
-        width: 250px; /* Ajuste a largura do card conforme necessário */
-        scroll-snap-align: center;
+        flex: 0 0 auto; /* Cards não encolhem */
+        width: 250px;
+        scroll-snap-align: center; /* Garante que cada card se alinhe ao rolar */
     }
 
     .product img {
@@ -361,6 +363,8 @@ form button:hover {
     button {
         width: 100%;
     }
+}
+
 
     .cart {
         padding: 15px;
@@ -404,5 +408,67 @@ form button:hover {
         font-size: 12px;
         border-radius: 10px;
         width: 80px;
+    }
+
+    .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
+
+
+        .product img{
+            height: 100px;
+        }
+
+        button {
+            width: 100%;
+        }
+
+        .cart {
+            padding: 15px;
+            margin: 10px;
+        }
+
+        .cart h1 {
+            font-size: 26px;
+        }
+
+        .cart h2 {
+            font-size: 20px;
+        }
+
+        .cart-item {
+            padding: 10px 0;
+        }
+
+        .cart-item span {
+            font-size: 16px;
+        }
+
+        .cart-item button {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .cart-button {
+            color: #47150C;
+            size: 50px;
+        }
+
+        select,
+        input[type="text"],
+        form button {
+            width: 100%;
+        }
+
+        .cart-item button {
+            padding: 8px;
+            font-size: 12px;
+            border-radius: 10px;
+            width: 80px;
+        }
+
+
+
     }
 }
