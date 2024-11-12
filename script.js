@@ -31,7 +31,7 @@ productsContainer.addEventListener('mousemove', (e) => {
     if (!isMouseDown) return;
     e.preventDefault();
     const x = e.pageX - productsContainer.offsetLeft;
-    const walk = (x - startX) * 3; 
+    const walk = (x - startX) * 3;
     productsContainer.scrollLeft = scrollLeft - walk;
 });
 
